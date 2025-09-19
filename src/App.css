@@ -1,0 +1,72 @@
+#root {
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  
+}
+.main_div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+
+
+.site-logo {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 96px;
+  height: auto;
+  pointer-events: none;
+  opacity: 0.95;
+}
+
+@media (max-width: 800px) {
+  .main_div {
+    width: calc(100% - 2rem);
+    padding-top: 56px; /* leave room for logo */
+  }
+  .site-logo {
+    width: 72px;
+    top: 8px;
+    right: 8px;
+  }
+}
+}
+
+.card {
+  width: 60%;
+  height: 30%;
+  border-radius: 30px;
+  padding: 20%;
+  background: lightgrey;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 50px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 26px -18px inset;
+  color: black;
+  text-align: center;
+  margin: auto;
+}
+
+/* FormAll styling */
+.fa-form-list {
+  list-style: none;
+  padding: 0;
+  max-width: 420px;
+  margin: 0 auto;
+}
+.fa-row {
+  margin: 0.5rem 0;
+  position: relative;
+}
+.fa-row label { display: block; text-align: left; color: #fff; }
+.fa-row input { width: 100%; padding: 8px; border-radius: 4px; border: 1px solid #ccc; }
+
+.fa-suggestions { position: absolute; left: 0; right: 0; margin: 0; padding: 0; list-style: none; z-index: 20; border-radius: 6px; overflow: hidden; }
+.fa-suggestions li.fa-suggestion { padding: 8px 10px; cursor: pointer; }
+.fa-suggestion-title { font-weight: 700; }
+.fa-suggestion-sub { font-size: 12px; opacity: 0.9; }
+
+/* Theme: avoid white-on-white - use dark surfaces when text is light */
+.fa-suggestions-miejscowosc { background: #2b2b2b; color: #fff; border: 1px solid #444; }
+.fa-suggestions-postal { background: #1f3b4d; color: #fff; border: 1px solid #2c4b5a; }
+.fa-suggestion:hover { background: rgba(255,255,255,0.06); }
